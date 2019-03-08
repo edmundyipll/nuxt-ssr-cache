@@ -58,7 +58,7 @@ then inside your `nuxt.config.js` add cache config:
               '/page1',
               '/page2',
             ],
-            preprocessCacheKey(defaultCacheKey, context) {
+            preprocessKey(defaultCacheKey, context) {
                 // optional, can preprocess cache key using this function
                 return whatEverYouLike(defaultCacheKey);
             }
