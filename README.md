@@ -61,7 +61,11 @@ then inside your `nuxt.config.js` add cache config:
             preprocessKey(defaultCacheKey, context) {
                 // optional, can preprocess cache key using this function
                 return whatEverYouLike(defaultCacheKey);
-            }
+            },
+            beforeSetCache(result) {
+                // optional, can preprocess cache result using this function
+                result.html = result.html.replace(regex, '');
+            },
           },
 
           // ...
